@@ -1,0 +1,44 @@
+$main-color: tomato;
+$sub-color: white;
+
+@mixin my-font {
+  font-family: sans-serif;
+  font-size: 55px;
+  font-weight: 700;
+  color: #3d3d3d;
+}
+@mixin my-font2($font-color, $bg-color: yellow) {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #999;
+  background-color: $bg-color;
+}
+
+.container {
+  background-color: white;
+  h1 {
+    @include my-font2(red, purple);
+  }
+  p {
+    @include my-font2(red);
+    span {
+      color: $main-color;
+      @include my-font;
+    }
+  }
+  .first {
+    &:hover {
+      background: {
+        color: $main-color;
+      }
+    }
+  }
+  .second {
+    &:hover {
+      background: {
+        color: $sub-color;
+      }
+    }
+  }
+}

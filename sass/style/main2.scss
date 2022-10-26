@@ -1,0 +1,15 @@
+@mixin boxstyle($bgcolor: yellow, $fontcolor: black) {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bgcolor;
+  color: $fontcolor;
+}
+.one {
+  @include boxstyle;
+}
+.two {
+  @include boxstyle(purple, white);
+}
