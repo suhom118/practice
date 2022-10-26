@@ -1,0 +1,82 @@
+@import url("default.css");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400;700&display=swap");
+@mixin flexbox1($align_center: center) {
+  display: flex;
+  justify-content: space-between;
+  align-items: $align_center;
+  background-color: #263343;
+}
+
+body {
+  font-family: "Source Code Pro";
+  position: relative;
+  color: #fff;
+  .navbar {
+    @include flexbox1;
+    padding: 10px 0;
+    .navbar_logo {
+      @include flexbox1;
+      font-size: 24px;
+      span {
+        margin: 0 5px;
+        color: #d49466;
+      }
+    }
+    .navbar_menu {
+      @include flexbox1(center);
+
+      li {
+        padding: 8px 12px;
+        &:hover {
+          background-color: #d49466;
+          border-radius: 4px;
+        }
+      }
+    }
+    .navbar_icons {
+      color: #fff;
+      @include flexbox1;
+      li {
+        padding: 8px 12px;
+      }
+    }
+    .toggle_btn {
+      display: none;
+      position: absolute;
+      right: 32px;
+      font-size: 24px;
+      color: #d49466;
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  body {
+    .navbar {
+      flex-direction: column;
+      @include flexbox1(flex-start);
+      .navbar_logo {
+        font-size: 20px;
+      }
+      .navbar_menu {
+        display: none;
+        margin: 10px 0 0 0;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+      .navbar_icons {
+        display: none;
+        margin: 10px 0 0 0;
+        width: 100%;
+        justify-content: center;
+      }
+      .toggle_btn {
+        display: block;
+      }
+      .navbar_menu.active,
+      .navbar_icons.active {
+        display: flex;
+      }
+    }
+  }
+}
