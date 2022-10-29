@@ -1,0 +1,32 @@
+body {
+  font-family: "Fuzzy Bubbles", cursive;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: wheat;
+  margin: 0;
+  font-size: 2rem;
+}
+
+p#typing {
+  border-right: 3px solid wheat;
+  animation: blink 0.5s infinite, typing 2s steps(11) forwards;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
