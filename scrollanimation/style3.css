@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+}
+
+.box {
+  width: 10rem;
+  height: 40rem;
+  margin: 5rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background-color: #febf00;
+  transition: 0.4s;
+}
+
+.box.active {
+  width: 20rem;
+  background: #f03d3d;
+  color: #fff;
+}
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+* {
+  font-family: Pretendard;
+}
