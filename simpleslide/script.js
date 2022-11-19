@@ -49,4 +49,7 @@ jQuery(document).ready(function ($) {
   $("a.control_next").click(function () {
     moveRight();
   });
+  console.log(slideWidth);
+  console.log(slideHeight);
+  console.log(sliderUlWidth);
 });
