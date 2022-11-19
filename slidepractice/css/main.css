@@ -181,10 +181,11 @@ body {
 }
 .slide-practice {
   width: 100vw;
-  height: 100vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: -90px;
 }
 .slide-practice .leftbtn,
 .slide-practice .rightbtn {
@@ -198,7 +199,7 @@ body {
 }
 .slide-practice .container {
   width: 440px;
-  height: 640px;
+  height: 440px;
   overflow: hidden;
   border-radius: 40px;
   position: relative;
@@ -211,8 +212,9 @@ body {
   width: 440px;
   height: 440px;
 }
-.slide-practice .container .slider_option {
-  margin: 30px auto;
+
+.slider_option {
+  margin: 30px 40px;
   text-align: center;
   font-size: 18px;
 }/*# sourceMappingURL=main.css.map */
